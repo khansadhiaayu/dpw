@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh List HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-top: 25px;
+            color: #333;
+        }
+
+        ol, ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contoh Ordered, Unordered, dan Nested List</h1>
+
+        <p><strong>Ordered List</strong> adalah daftar yang memiliki urutan, biasanya menggunakan angka atau huruf.</p>
+        <p><strong>Unordered List</strong> adalah daftar yang tidak memiliki urutan tertentu dan biasanya menggunakan bullet atau titik.</p>
+
+        <hr />
+                <h2>Ordered List</h2>
+        <ol type="1">
+            <li>Jenis Buah</li>
+            <li>Jenis Makanan</li>
+            <li>Gender</li>
+        </ol>
+
+        <h2>Unordered List</h2>
+        <ul>
+            <li>Apel</li>
+            <li>Nanas</li>
+            <li>Jeruk</li>
+            <li>Anggur</li>
+        </ul>
+
+        <h2>Nested List</h2>
+        <ol type="A">
+            <li>
+                Jenis Buah
+                <ul>
+                    <li>Apel</li>
+                    <li>Nanas</li>
+                </ul>
+            </li>
+            <li>Jenis Makanan</li>
+            <li>Gender</li>
+        </ol>
+    </div>
+</body>
+</html>
