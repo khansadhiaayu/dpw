@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Halaman Event</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="John Doe"><!-- ubah dengan nama anda-->
+  <meta name="nim" content="12345"><!-- ubah dengan nim anda-->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+    nav {
+      float: left;
+      width: 30%;
+      background: #ccc;
+      padding: 20px;
+      min-height: 300px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      min-height: 300px;
+    }
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .gallery img {
+      width: 150px;
+      height: 110px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+    #info-box {
+      margin-top: 10px;
+      padding: 8px;
+      background-color: #ffffcc;
+      border: 1px solid #ccc;
+      min-height: 30px;
+    }
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Event</h2>
+  </header>
+
+  <section>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gambar.html">Gambar</a></li>
+        <li><a href="event.html">Event</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="svg.html">SVG</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h1>Gambar dengan Mouse Event</h1>
+      <div id="info-box">Arahkan mouse ke gambar untuk melihat event...</div>
+      <div class="gallery">
+        <!-- Ganti nama file gambar sesuai file yang ada di folder gambar -->
+        <img src="gambar/pemandangan 1.jpg" alt="Pemandangan 1"
+          onmouseover="document.getElementById('info-box').innerHTML='Mouse masuk ke Gambar 1'; this.style.opacity='0.6';"
+          onmouseout="document.getElementById('info-box').innerHTML='Mouse keluar dari Gambar 1'; this.style.opacity='1';"
+          onclick="document.getElementById('info-box').innerHTML='Gambar 1 diklik!';">
+
+        <img src="gambar/pemandangan 2.jpg" alt="Pemandangan 2"
+          onmouseover="document.getElementById('info-box').innerHTML='Mouse masuk ke Gambar 2'; this.style.opacity='0.6';"
+          onmouseout="document.getElementById('info-box').innerHTML='Mouse keluar dari Gambar 2'; this.style.opacity='1';"
+          onclick="document.getElementById('info-box').innerHTML='Gambar 2 diklik!';">
+
+        <img src="gambar/pemandangan 3.jpg" alt="Pemandangan 3"
+          onmouseover="document.getElementById('info-box').innerHTML='Mouse masuk ke Gambar 3'; this.style.opacity='0.6';"
+          onmouseout="document.getElementById('info-box').innerHTML='Mouse keluar dari Gambar 3'; this.style.opacity='1';"
+          ondblclick="document.getElementById('info-box').innerHTML='Gambar 3 double-diklik!';">
+
+        <img src="gambar/pemandangan 4.jpg" alt="Pemandangan 4"
+          onmouseover="document.getElementById('info-box').innerHTML='Mouse masuk ke Gambar 4'; this.style.opacity='0.6';"
+          onmouseout="document.getElementById('info-box').innerHTML='Mouse keluar dari Gambar 4'; this.style.opacity='1';"
+          onmousedown="document.getElementById('info-box').innerHTML='Tombol mouse ditekan pada Gambar 4';"
+          onmouseup="document.getElementById('info-box').innerHTML='Tombol mouse dilepas pada Gambar 4';">
+
+        <img src="gambar/pemandangan 5.jpg" alt="Pemandangan 5"
+          onmouseover="document.getElementById('info-box').innerHTML='Mouse masuk ke Gambar 5'; this.style.opacity='0.6';"
+          onmouseout="document.getElementById('info-box').innerHTML='Mouse keluar dari Gambar 5'; this.style.opacity='1';"
+          onclick="alert('Anda mengklik Gambar 5!');">
+
+        <img src="gambar/pemandangan 6.jpg" alt="Pemandangan 6"
+          onmouseover="document.getElementById('info-box').innerHTML='Mouse masuk ke Gambar 6'; this.style.opacity='0.6';"
+          onmouseout="document.getElementById('info-box').innerHTML='Mouse keluar dari Gambar 6'; this.style.opacity='1';"
+          ondblclick="alert('Anda double-klik Gambar 6!');">
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <p>Footer - Nama: Ayu Dhia Khansa | NIM: 253307009</p>
+  </footer>
+</body>
+</html>
