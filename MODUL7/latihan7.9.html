@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu jQuery</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#menu1").click(function(){
+        $("#content").text("Ini halaman Home");
+    });
+    $("#menu2").click(function(){
+        $("#content").text("Ini halaman Profil");
+    });
+});
+</script>
+
+</head>
+<body>
+
+<button id="menu1">Home</button>
+<button id="menu2">Profil</button>
+
+<p id="content"></p>
+
+</body>
+</html>

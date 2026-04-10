@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radio Box</title>
+<script>
+function cekRadio() {
+    var pilihan = document.querySelector('input[name="jk"]:checked');
+    if (pilihan) {
+        alert("Anda memilih: " + pilihan.value);
+    } else {
+        alert("Pilih salah satu!");
+    }
+}
+</script>
+</head>
+<body>
+
+<h3>Pilih Jenis Kelamin</h3>
+
+<input type="radio" name="jk" value="Laki-laki"> Laki-laki
+<input type="radio" name="jk" value="Perempuan"> Perempuan
+<br><br>
+
+<button onclick="cekRadio()">Cek</button>
+
+</body>
+</html>

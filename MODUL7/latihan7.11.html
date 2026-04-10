@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Progress Download</title>
+
+<script>
+function startDownload() {
+    var progress = document.getElementById("progress");
+    var width = 0;
+
+    var interval = setInterval(function(){
+        if (width >= 100) {
+            clearInterval(interval);
+            alert("Download selesai!");
+        } else {
+            width++;
+            progress.style.width = width + "%";
+            progress.innerHTML = width + "%";
+        }
+    }, 50);
+}
+</script>
+
+<style>
+#container {
+    width: 100%;
+    background: #ddd;
+}
+
+#progress {
+    width: 0%;
+    height: 30px;
+    background: green;
+    text-align: center;
+    color: white;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Download File</h2>
+
+<button onclick="startDownload()">Download</button>
+
+<br><br>
+
+<div id="container">
+    <div id="progress">0%</div>
+</div>
+
+</body>
+</html>

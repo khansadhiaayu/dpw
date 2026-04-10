@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jam Real Time</title>
+<script>
+function tampilWaktu() {
+    var now = new Date();
+    var waktu = now.toLocaleString();
+    document.getElementById("jam").innerHTML = waktu;
+}
+setInterval(tampilWaktu, 1000);
+</script>
+</head>
+<body>
+
+<h2>Waktu Sekarang</h2>
+<p id="jam"></p>
+
+</body>
+</html>

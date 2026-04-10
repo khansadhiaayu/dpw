@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Verifikasi Password</title>
+<script>
+function cekPassword() {
+    var pass1 = document.getElementById("pass1").value;
+    var pass2 = document.getElementById("pass2").value;
+
+    if (pass1 === pass2) {
+        alert("Password cocok!");
+    } else {
+        alert("Password tidak sama!");
+    }
+}
+</script>
+</head>
+<body>
+
+Password: <input type="password" id="pass1"><br><br>
+Ulangi Password: <input type="password" id="pass2"><br><br>
+
+<button onclick="cekPassword()">Cek</button>
+
+</body>
+</html>
