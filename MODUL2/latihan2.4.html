@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh CSS Dasar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        #header {
+            background: #4a90d9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #main {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #link {
+            width: 220px;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        }
+
+        #link ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #link li {
+            margin-bottom: 12px;
+        }
+
+        #link a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        #content {
+            flex: 1;
+            padding: 30px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .box {
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+
+        .powderblue { background: powderblue; }
+        .tomato { background: tomato; color: white; }
+        .blue { color: blue; }
+        .red { color: red; }
+        .verdana { font-family: Verdana; }
+        .courier { font-family: Courier New; }
+        .large { font-size: 300%; }
+        .medium { font-size: 160%; }
+        .center { text-align: center; }
+        .rgba { background: rgba(255, 99, 71, 0.5); }
+        .hsla { background: hsla(9, 100%, 64%, 0.5); }
+
+        #footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Belajar CSS Dasar</h1>
+    </div>
+
+    <div id="main">
+        <div id="link">
+            <ul>
+                <li><a href="#">Background</a></li>
+                <li><a href="#">Font</a></li>
+                <li><a href="#">Warna</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <h2>Contoh Background Color</h2>
+            <h1 class="box powderblue">Background Powderblue</h1>
+            <p class="box tomato">Background Tomato</p>
+
+            <h2>Contoh Warna Teks</h2>
+            <h1 class="blue">Teks Warna Biru</h1>
+            <p class="red">Teks Warna Merah</p>
+
+            <h2>Contoh Font</h2>
+            <h1 class="verdana">Heading font Verdana</h1>
+            <p class="courier">Paragraf font Courier New</p>
+
+            <h2>Contoh Ukuran Font</h2>
+            <h1 class="large">Ukuran 300%</h1>
+            <p class="medium">Ukuran 160%</p>
+
+            <h2>Contoh Posisi Teks</h2>
+            <h1 class="center">Teks di Tengah</h1>
+            <p class="center">Paragraf rata tengah</p>
+
+            <h2>Contoh Transparansi Warna</h2>
+            <h1 class="box rgba">RGBA 50%</h1>
+            <h1 class="box hsla">HSLA 50%</h1>
+
+            <p>
+                Selain nama warna, CSS juga mendukung RGB, HEX, HSL,
+                RGBA, dan HSLA untuk warna transparan.
+            </p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p><em>copyright © Ayu Dhia</em></p>
+    </div>
+
+</body>
+</html>

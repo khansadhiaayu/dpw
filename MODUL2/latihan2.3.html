@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Mahasiswa Baru</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        #header {
+            background: #4a90d9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #main {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #link {
+            width: 220px;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        }
+
+        #link ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #link li {
+            margin-bottom: 15px;
+        }
+
+        #link a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        #content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        fieldset {
+            border: none;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        legend {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        textarea,
+        select {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .inline {
+            display: inline-block;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .submit {
+            background: #4a90d9;
+            color: white;
+        }
+
+        .reset {
+            background: #999;
+            color: white;
+        }
+
+        #footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Pendaftaran Mahasiswa Baru</h1>
+    </div>
+
+    <div id="main">
+        <div id="link">
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Informasi</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <form>
+                <fieldset>
+                    <legend>Form Pendaftaran</legend>
+
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tempat/Tanggal Lahir</label>
+                        <input type="text" placeholder="Madiun, 23 September 2006">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Agama</label>
+                        <select>
+                            <option>Islam</option>
+                            <option>Kristen</option>
+                            <option>Hindu</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <input type="radio" class="inline"> Laki-laki
+                        <input type="radio" class="inline"> Perempuan
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alamat Rumah</label>
+                        <textarea rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jurusan Dipilih</label>
+                        <select>
+                            <option>Teknologi Informasi</option>
+                            <option>Administrasi Bisnis</option>
+                            <option>Akuntansi</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn submit">DAFTAR</button>
+                    <button type="reset" class="btn reset">BATAL</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p><em>copyright ©Ayu Dhia</em></p>
+    </div>
+
+</body>
+</html>
