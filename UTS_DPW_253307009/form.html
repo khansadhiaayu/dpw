@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Pendaftaran</title>
+  <link rel="stylesheet" href="asset/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Formulir Pendaftaran PPDB</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="alur.html">Alur Pendaftaran</a>
+    <a href="form.html">Form Pendaftaran</a>
+  </nav>
+
+  <main>
+    <section class="card">
+      <form id="ppdbForm">
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap" />
+
+        <label>NIK</label>
+        <input type="number" id="nik" placeholder="16 digit NIK" />
+
+        <label>Jalur Pendaftaran</label>
+        <select id="jalur">
+          <option value="">-- Pilih Jalur --</option>
+          <option value="Zonasi">Zonasi</option>
+          <option value="Prestasi">Prestasi</option>
+          <option value="Afirmasi">Afirmasi</option>
+          <option value="Akamsi">Akamsi</option>
+        </select>
+
+        <button type="button" onclick="kirimForm()">Kirim Pendaftaran</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="toast"></div>
+
+  <footer>
+    <p>&copy; 2026 Sekolah Global Nusantara</p>
+  </footer>
+
+  <script src="asset/javascript/script.js"></script>
+</body>
+</html>

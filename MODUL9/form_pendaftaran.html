@@ -1,0 +1,163 @@
+<?php
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendaftaran Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f3f6; /* Latar belakang abu-abu kebiruan */
+            padding: 30px;
+            color: #333;
+        }
+        .kotak-registrasi {
+            background-color: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 6px solid #1a5276; /* Garis atas warna Navy Blue */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        h2 {
+            margin-top: 0;
+            color: #1a5276;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Menggunakan layout tabel flexbox mini untuk merapikan baris input */
+        .grup-input {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="date"], textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        /* Gaya khusus untuk radio button gender agar sejajar teks */
+        .opsi-gender {
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        .opsi-gender input {
+            margin-right: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #1a5276;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #21618c;
+        }
+        /* Kotak Hasil Review setelah submit */
+        .kotak-hasil-daftar {
+            background-color: #ebf5fb;
+            border-left: 5px solid #2980b9;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 4px;
+        }
+        .judul-hasil {
+            margin-top: 0;
+            color: #1b4f72;
+            border-bottom: 1px solid #d4e6f1;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        table.tabel-hasil {
+            width: 100%;
+            font-size: 14px;
+            border-collapse: collapse;
+        }
+        table.tabel-hasil td {
+            padding: 4px 0;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kotak-registrasi">
+    <h2>Form Pendaftaran</h2>
+    
+    <form method="POST" action="proses_pendaftaran.php">
+        <div class="grup-input">
+            <label>NIM :</label>
+            <input type="text" name="nim" placeholder=>
+        </div>
+        
+        <div class="grup-input">
+            <label>Nama Lengkap :</label>
+            <input type="text" name="nama" placeholder=>
+        </div>
+        
+        <div class="grup-input">
+            <label>Email :</label>
+            <input type="email" name="email" placeholder=>
+        </div>
+        
+        <div class="grup-input">
+            <label>Tempat Lahir :</label>
+            <input type="text" name="tempat" placeholder=>
+        </div>
+        
+        <div class="grup-input">
+            <label>Tanggal Lahir :</label>
+            <input type="date" name="ttl" required>
+        </div>
+        
+        <div class="grup-input">
+            <label>Alamat Lengkap :</label>
+            <textarea name="alamat" rows="3" placeholder></textarea>
+        </div>
+        
+        <div class="grup-input">
+            <label>Jenis Kelamin :</label>
+            <div class="opsi-gender">
+                <input type="radio" name="gender" value="Laki-Laki" id="l"><label style="display:inline; font-weight:normal;" for="l">Laki-Laki</label>
+                <input type="radio" name="gender" value="Perempuan" id="p"><label style="display:inline; font-weight:normal;" for="p">Perempuan</label>
+            </div>
+        </div>
+        
+        <input type="submit" name="kirim" value="Daftar Sekarang">
+    </form>
+
+    <?php if ($sudah_dikirim) { ?>
+        <div class="kotak-hasil-daftar">
+            <h4 class="judul-hasil">Pendaftaran Berhasil Berhasil!</h4>
+            <table class="tabel-hasil">
+                <tr><td width="35%">NIM</td><td>: <b><?php echo $nim; ?></b></td></tr>
+                <tr><td>Nama</td><td>: <b><?php echo $nama; ?></b></td></tr>
+                <tr><td>Email</td><td>: <?php echo $email; ?></td></tr>
+                <tr><td>TTL</td><td>: <?php echo $tempat . ", " . $ttl; ?></td></tr>
+                <tr><td>Alamat</td><td>: <?php echo $alamat; ?></td></tr>
+                <tr><td>Jenis Kelamin</td><td>: <b><?php echo $gender; ?></b></td></tr>
+            </table>
+        </div>
+    <?php } ?>
+
+</div>
+
+</body>
+</html>
